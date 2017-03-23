@@ -7,7 +7,8 @@
 库名字 | 库简介 
 ---|---
 [okhttp](https://github.com/square/okhttp)  | 访问网络
-6  plus | 1920*1080
-6s | 1334*750  
-6 | 1334*750  
-5s | 1136*640 
+[retrofit](https://github.com/square/retrofit)  | 访问网络
+[RxJava](https://github.com/ReactiveX/RxJava)  | 简化异步操作
+[dagger2](https://github.com/google/dagger)  | 解耦
+[butterknife](https://github.com/JakeWharton/butterknife)  | 不用findViewById了
+[eventbus](https://github.com/greenrobot/EventBus)  | 发送消息
