@@ -1,7 +1,8 @@
 # 项目介绍
 一款基于mvp okhttp retrofit rxjava dagger2 butterknife eventbus众多开源框架的一款App
 
-# 第三方库感谢开源大神啊啊啊
+# 第三方库
+全体CV战士向开源大神敬礼
 
 库名字 | 库简介 
 ---|---
