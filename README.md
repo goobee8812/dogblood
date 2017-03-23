@@ -1,6 +1,9 @@
 # 项目介绍
 一款基于mvp okhttp retrofit rxjava dagger2 glide butterknife eventbus众多开源框架的一款App
 
+# 项目演示
+![image](https://github.com/cuiyue1988/dogblood/blob/master/image/video.gif)
+
 # 第三方库
 全体CV战士向开源大神敬礼
 
@@ -21,7 +24,6 @@
 
 # 赏我一点买护手霜的钱
 微信扫我
-
 ![image](https://github.com/cuiyue1988/dogblood/blob/master/image/weixinpay.png)
 
 # 免责声明
