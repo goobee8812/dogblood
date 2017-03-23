@@ -20,7 +20,8 @@
 [GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)  | 视频相关
 
 # 赏我一点买护手霜的钱
+微信扫我
 ![image](https://github.com/cuiyue1988/dogblood/blob/master/image/weixinpay.png)
-微信支付
+
 # 免责声明
 该项目仅供自己和广大程序猿学习交流使用，api和素材均来源网络，如有侵权请告知，立马删除。如果因他人下载使用产生纠纷均与本人无关。
