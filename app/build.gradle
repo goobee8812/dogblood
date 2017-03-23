@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.dog"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resConfigs "zh","en"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //test
+    testCompile 'junit:junit:4.12'
+
+    //系统UI********************************************************
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+
+    //第三方UI********************************************************
+    //Fragment懒加载
+    compile 'me.yokeyword:fragmentation:0.9.5'
+    //首页底部Tab栏
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.0@aar'
+    //拉下刷新，上拉加载更多的recyclerview
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+    //loading
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.4'
+    //加载图片
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //http********************************************************
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //rx********************************************************
+    compile 'io.reactivex:rxandroid:1.2.1'
+
+    // dagger2********************************************************
+    compile 'com.google.dagger:dagger:2.4'
+    provided 'com.google.dagger:dagger-compiler:2.4'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    //butterknife********************************************************
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //eventbus********************************************************
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //video
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.6'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.6'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.6'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.6'
+
+    //transitionseverywhere
+    compile 'com.andkulikov:transitionseverywhere:1.7.0'
+
+    compile 'com.danikula:videocache:2.6.4'
+    compile 'com.squareup.leakcanary:leakcanary-android:1.5'
+
+}

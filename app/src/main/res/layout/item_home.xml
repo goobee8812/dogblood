@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root_news_item"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/iv_news_item"
+        android:layout_width="128dp"
+        android:layout_height="96dip"
+        android:layout_centerVertical="true"
+        android:src="@drawable/item_news_iv_placeholder" />
+
+    <TextView
+        android:id="@+id/tv_news_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/iv_news_item" />
+
+</RelativeLayout>

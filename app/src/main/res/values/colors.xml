@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="style_color">#005fff</color><!--主题色-->
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="appbar_bg">#24236e</color>
+    <color name="toast_bg">#dddfe0</color>
+
+    <color name="white">#FFFFFF</color>
+
+</resources>
