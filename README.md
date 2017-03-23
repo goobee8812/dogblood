@@ -23,7 +23,13 @@
 [GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)  | 视频相关
 
 # 赏我一点买护手霜的钱
-微信扫我
+### 微信扫我
+![image](https://github.com/cuiyue1988/dogblood/blob/master/image/weixinpay.png)
+
+# 特别感谢
+感谢天狗提供的网络数据 http://www.tngou.net/
+
+### 微信扫我
 ![image](https://github.com/cuiyue1988/dogblood/blob/master/image/weixinpay.png)
 
 # 免责声明
