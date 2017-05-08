@@ -1,11 +1,16 @@
 # 项目介绍
 一款基于mvp okhttp retrofit rxjava dagger2 glide butterknife eventbus众多开源框架的一款App
 
+# 项目演示
+![image](https://github.com/cuiyue1988/dogblood/blob/master/image/video.gif)
+
 # 第三方库
 全体CV战士向开源大神敬礼
 
 库名字 | 库简介 
 ---|---
+[androidmvp](https://github.com/antoniolg/androidmvp)  | MVP参考
+[GeekNews](https://github.com/codeestX/GeekNews)  | MVP参考
 [okhttp](https://github.com/square/okhttp)  | 访问网络
 [retrofit](https://github.com/square/retrofit)  | 访问网络
 [RxJava](https://github.com/ReactiveX/RxJava)  | 简化异步操作
@@ -20,9 +25,11 @@
 [GSYVideoPlayer](https://github.com/CarGuo/GSYVideoPlayer)  | 视频相关
 
 # 赏我一点买护手霜的钱
-微信扫我
-
+### 微信扫我
 ![image](https://github.com/cuiyue1988/dogblood/blob/master/image/weixinpay.png)
+
+# 特别感谢
+感谢天狗提供的网络数据 http://www.tngou.net/
 
 # 免责声明
 该项目仅供自己和广大程序猿学习交流使用，api和素材均来源网络，如有侵权请告知，立马删除。如果因他人下载使用产生纠纷均与本人无关。
