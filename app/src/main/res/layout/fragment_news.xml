@@ -17,7 +17,6 @@
             android:id="@+id/tab_layout_news"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/appbar_bg"
             app:tabIndicatorColor="#f85959"
             app:tabSelectedTextColor="#f85959"
             app:tabTextColor="@android:color/white" />
