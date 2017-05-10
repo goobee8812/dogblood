@@ -6,4 +6,6 @@
 
     <dimen name="seek_bar_image">150dp</dimen>
 
+    <dimen name="toolbar_padding_top">0dp</dimen>
+
 </resources>

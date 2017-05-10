@@ -7,15 +7,16 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_news"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlebar_height"
+        android:layout_height="75dp"
         android:background="@color/appbar_bg"
+        android:paddingTop="@dimen/toolbar_padding_top"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout_news"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/titlebar_height"
+            android:layout_height="50dp"
             android:background="@color/appbar_bg"
             app:tabIndicatorColor="#f85959"
             app:tabSelectedTextColor="#f85959"
