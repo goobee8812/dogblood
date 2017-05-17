@@ -3,21 +3,14 @@ package com.dog.ui.activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.LayoutRes;
-import android.view.View;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.dog.BuildConfig;
 import com.dog.R;
-import com.dog.base.BaseActivity;
 import com.dog.base.SimpleActivity;
-import com.dog.model.bean.TopBean;
-
-import butterknife.BindView;
+import com.dog.util.Utils;
 
 /**
  * 启动页面
@@ -42,12 +35,19 @@ public class LauncherActivity extends SimpleActivity {
 
     @Override
     protected void initView() {
+        String id = Utils.getChannelID(mContext);
+        Log.d("abc", "ChannelID-->" + id);
+
+        if (BuildConfig.DEBUG) {
+            Log.d("abc", "测试包-->");
+        } else {
+            Log.d("abc", "正式包-->");
+        }
 
     }
 
     @Override
     protected void initData() {
-
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
