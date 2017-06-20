@@ -1,6 +1,7 @@
 package com.dog.ui.activity;
 
 import android.content.Intent;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.LayoutRes;
 import android.util.Log;
@@ -17,6 +18,13 @@ import com.dog.util.Utils;
  */
 
 public class LauncherActivity extends SimpleActivity {
+
+
+    /*程序SD卡存储根目录*/
+    public static final String SD_PATH = Environment
+            .getExternalStorageDirectory() + "/";
+    /*补丁包位置*/
+    public static final String TINKER = SD_PATH + "tinker/test";
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
@@ -35,14 +43,16 @@ public class LauncherActivity extends SimpleActivity {
 
     @Override
     protected void initView() {
-        String id = Utils.getChannelID(mContext);
-        Log.d("abc", "ChannelID-->" + id);
+//        String id = Utils.getChannelID(mContext);
+//        Log.d("abc", "ChannelID-->" + id);
+//
+//        if (BuildConfig.DEBUG) {
+//            Log.d("abc", "测试包-->");
+//        } else {
+//            Log.d("abc", "正式包-->");
+//        }
 
-        if (BuildConfig.DEBUG) {
-            Log.d("abc", "测试包-->");
-        } else {
-            Log.d("abc", "正式包-->");
-        }
+        Log.d("abc","TINKER--->"+TINKER);
 
     }
 

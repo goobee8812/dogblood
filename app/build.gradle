@@ -17,107 +17,107 @@ android {
         multiDexEnabled true
     }
 
-    signingConfigs {
+//    signingConfigs {
+//
+//        myConfig {
+//            storeFile file("../jks/dog.jks")
+//            keyAlias "dog"
+//            storePassword "123456"
+//            keyPassword "123456"
+//        }
+//
+//    }
 
-        myConfig {
-            storeFile file("../jks/dog.jks")
-            keyAlias "dog"
-            storePassword "123456"
-            keyPassword "123456"
-        }
+//    buildTypes {
 
-    }
+//        debug {
+//            signingConfig signingConfigs.myConfig
+//        }
 
-    buildTypes {
-
-        debug {
-            signingConfig signingConfigs.myConfig
-        }
-
-        release {
-            // 不显示Log
-//            buildConfigField "boolean", "LOG_DEBUG", "false"
-            minifyEnabled false
-            zipAlignEnabled false
-            // 移除无用的resource文件
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.myConfig
-
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        // 输出apk名称为app_v1.0_2017-05-17_anzhi.apk
-                        def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
-                    }
-                }
-            }
-        }
-    }
+//        release {
+//            // 不显示Log
+////            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            minifyEnabled false
+//            zipAlignEnabled false
+//            // 移除无用的resource文件
+//            shrinkResources false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.myConfig
+//
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        // 输出apk名称为app_v1.0_2017-05-17_anzhi.apk
+//                        def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     // 友盟多渠道打包
-    productFlavors {
-        server {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "server"]
-        }
-        qqTencent {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qqTencent"]
-        }
-        wandoujia {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-        }
-        zs91zhushou {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "zs91zhushou"]
-        }
-        huawei {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
-        }
-        xiaomi {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
-        }
-        baidu {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
-        }
-        anzhi {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhi"]
-        }
-        oppo {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
-        }
-        appchina {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "appchina"]
-        }
-        lenovo {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "lenovo"]
-        }
-        meizu {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
-        }
-        baidusem {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidusem"]
-        }
-        ucWeb {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ucWeb"]
-        }
-        dev360cn {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "dev360cn"]
-        }
-        vivo {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
-        }
-    }
-
-    productFlavors.all { flavor ->
-        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
-    }
-
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
+//    productFlavors {
+//        server {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "server"]
+//        }
+//        qqTencent {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qqTencent"]
+//        }
+//        wandoujia {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+//        }
+//        zs91zhushou {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "zs91zhushou"]
+//        }
+//        huawei {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+//        }
+//        xiaomi {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+//        }
+//        baidu {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+//        }
+//        anzhi {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhi"]
+//        }
+//        oppo {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+//        }
+//        appchina {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "appchina"]
+//        }
+//        lenovo {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "lenovo"]
+//        }
+//        meizu {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
+//        }
+//        baidusem {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidusem"]
+//        }
+//        ucWeb {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ucWeb"]
+//        }
+//        dev360cn {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "dev360cn"]
+//        }
+//        vivo {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+//        }
+//    }
+//
+//    productFlavors.all { flavor ->
+//        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//    }
+//
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
 }
 
 def releaseTime() {
