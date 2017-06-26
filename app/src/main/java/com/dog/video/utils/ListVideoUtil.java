@@ -70,7 +70,7 @@ public class ListVideoUtil {
 
     private boolean fullLandFrist = true; //是否全屏就马上横屏
     private boolean autoRotation = false;//是否自动旋转
-    private boolean showFullAnimation = false;//是否需要全屏动画
+    private boolean showFullAnimation = true;//是否需要全屏动画
 
     private Handler handler = new Handler();
 
